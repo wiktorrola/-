@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularz</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Stylizacja header */
+        header {
+            width: 930px;
+            margin: 0 auto;
+            height: 200px;
+            display: flex;
+            background-color: blue; /* Kolor tła bloku header */
+        }
+
+        .lewy, .srodek, .prawy {
+            height: 150px;
+            margin: 10px;
+            padding: 10px;
+            background-color: green; /* Kolor tła bloku lewego, środkowego i prawego */
+            display: flex;
+            align-items: center; /* Wyrównanie do środka w pionie */
+        }
+
+        .srodek {
+            width: 400px; /* Szerokość bloku środkowego */
+        }
+
+        .lewy, .prawy {
+            width: 200px; /* Szerokość bloków lewego i prawego */
+        }
+
+        /* Stylizacja bloku main */
+        main {
+            width: 930px;
+            margin: 0 auto;
+            height: 400px;
+            background-color: pink; /* Kolor tła bloku main */
+            display: flex;
+            justify-content: center; /* Wyśrodkowanie formularza */
+            align-items: center; /* Wyśrodkowanie formularza */
+        }
+
+        /* Stylizacja formularza */
+        form {
+            float: left;
+            display: flex;
+            flex-direction: column; /* Ułożenie pól w kolumnie */
+            width: 100%;
+        }
+
+        /* Stylizacja pól formularza */
+        label {
+            float:left;
+            margin: 5px 0; /* Marginesy dla etykiet */
+        }
+
+        /* Stylizacja bloku footer */
+        footer {
+            width: 930px;
+            margin: 0 auto;
+            height: 200px;
+            background-color: yellow; /* Kolor tła bloku footer */
+            display: flex;
+            justify-content: center; /* Wyśrodkowanie tekstu */
+            align-items: center; /* Wyśrodkowanie tekstu */
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="lewy">Blok lewy</div>
+    <div class="srodek">Blok środkowy</div>
+    <div class="prawy">Blok prawy</div>
+</header>
+
+<main>
+    <form action="" method="get">
+        <label for="imie">Podaj imię:</label>
+        <input type="text" id="imie" name="imie" required>
+
+        <label for="data">Podaj datę rozpoczęcia umowy:</label>
+        <input type="date" id="data" name="data" required>
+
+        <label for="email">Podaj email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="kolor">Podaj kolor:</label>
+        <input type="color">
+
+        <label for="haslo">Podaj hasło:</label>
+        <input type="password" id="haslo" name="haslo" required>
+
+        <label for="ilosc">Wybierz ilość:</label>
+        <input type="range">
+        </select>
+
+        <button type="submit">Zapisz dane</button>
+        <button type="reset">Resetuj formularz</button>
+    </form>
+</main>
+
+<footer>
+    <p>Stopka strony</p>
+</footer>
+
+</body>
+</html>
